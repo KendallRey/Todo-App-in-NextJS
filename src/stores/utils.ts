@@ -1,7 +1,9 @@
 'use client'
 
+type SetFnType<T extends Record<string, unknown>> = (fn: (state: FormStoreType<T>) => void) => void
+
 // #region setForm
-export const setForm = <T extends Record<string, unknown>>(set: Function, data: T) => {
+export const setForm = <T extends Record<string, unknown>>(set: SetFnType<T>, data: T) => {
   return set((state: FormStoreType<T>) => {
     state.form = data
     state.error = { }
@@ -10,7 +12,7 @@ export const setForm = <T extends Record<string, unknown>>(set: Function, data: 
 // #endregion
 
 // #region setOnChange
-export const setOnChange = <T extends Record<string, unknown>>(set: Function, e: RCE) => {
+export const setOnChange = <T extends Record<string, unknown>>(set: SetFnType<T>, e: RCE) => {
   const { name, type, checked, value } = e.target;
   return set((state: FormStoreType<T>) => {
     state.form = { ...state.form, [name]: type == "checkbox" ? checked : value }
@@ -21,7 +23,7 @@ export const setOnChange = <T extends Record<string, unknown>>(set: Function, e:
 
 
 // #region setErrors
-export const setErrors = (set: Function, err: Record<string, unknown>) => {
+export const setErrors = <T extends Record<string, unknown>>(set: SetFnType<T>, err: Record<string, unknown>) => {
   return set((state: FormStoreType<Record<string, unknown>>) => {
     state.error = err
   })
@@ -29,7 +31,7 @@ export const setErrors = (set: Function, err: Record<string, unknown>) => {
 // #endregion
 
 // #region setReset
-export const setReset = <T extends Record<string, unknown>>(set: Function, data: T) => {
+export const setReset = <T extends Record<string, unknown>>(set: SetFnType<T>, data: T) => {
   return set((state: FormStoreType<T>) => {
     state.form = data
     state.error = { }

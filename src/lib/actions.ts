@@ -11,7 +11,7 @@ export async function createTodo(data: Record<string, unknown>) {
     revalidatePath('/')
     return { data: res.data, error: undefined}
   }
-  catch (err) {
+  catch {
     return { data: undefined, error: "Something went wrong" }
   }
 
@@ -25,7 +25,7 @@ export async function updateTodo(id: ID, data: Record<string, unknown>) {
     revalidatePath('/')
     return { data: res.data, error: undefined}
   }
-  catch (err) {
+  catch {
     return { data: undefined, error: "Something went wrong" }
   }
 
@@ -40,7 +40,7 @@ export async function deleteTodo(id: ID) {
     revalidatePath('/')
     return { data: res.data, error: undefined}
   }
-  catch (err) {
+  catch {
     return { data: undefined, error: "Something went wrong" }
   }
 }

@@ -2,9 +2,7 @@
 
 import { TodoModelType } from '@/models/todo'
 import React from 'react'
-import { MuiCheckbox } from '../checkbox/MuiCheckbox';
 import { Trash, PenSquareIcon } from 'lucide-react';
-import { IconButton } from '@mui/material';
 import { TWCheckbox } from '../checkbox/TWCheckbox';
 import { TWButton } from '../button/TWButton';
 
