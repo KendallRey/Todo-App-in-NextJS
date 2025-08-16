@@ -1,3 +1,5 @@
+'use client'
+
 import { styled, Switch } from "@mui/material";
 import { useTheme } from "next-themes";
 
