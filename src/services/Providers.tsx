@@ -14,7 +14,7 @@ const Providers = ({ children }: ProvidersProps) => {
   const queryClient = getQueryClient()
   return (
     <>
-      <ThemeProvider disableTransitionOnChange>
+      <ThemeProvider defaultTheme="system" enableSystem>
         <QueryClientProvider client={queryClient}>
           <TodoStoreProvider>
             <SnackbarProvider />

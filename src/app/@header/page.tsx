@@ -1,7 +1,6 @@
 'use client'
 
-// I use MUI for this instance
-import { MuiToggleTheme } from '@/components'
+import { CustomToggleTheme } from '@/components'
 import React from 'react'
 
 const HeaderPage = () => {
@@ -12,8 +11,7 @@ const HeaderPage = () => {
         ToDo List
       </h1>
       <div className='flex justify-end items-center gap-2'>
-        {/* <CustomToggleTheme /> */}
-        <MuiToggleTheme />
+        <CustomToggleTheme />
       </div>
     </div>
   )
