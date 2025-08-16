@@ -23,7 +23,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Other packages I used:
   - Axios
   - Zod (for validations & schema types)
-  - MUI (the that one switch component, toggle theme)
   - React Query for Fetching, (Create, Update)
     - server actions for mark as done (update) and delete
   - Next-Themes for theme
