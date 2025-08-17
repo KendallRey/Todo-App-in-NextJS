@@ -28,3 +28,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   - Next-Themes for theme
   - Notistack for toast / snackbar
   - Zustand (w/ immer) for state management
+
+# Optimization
+## Start optimization here, run command
+```bash
+ANALYZE=true npm run build
+```
